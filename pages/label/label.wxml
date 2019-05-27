@@ -1,0 +1,7 @@
+<view wx:for="{{list}}" wx:key="{{index}}">
+  <i-swipeout i-class="i-swipeout-demo-item" actions="{{actions}}" operateWidth="{{100}}" bind:change="delete" data-index="{{index}}">
+    <view slot="content">
+      <i-cell i-class="i-cell-padding" title="{{item.tag}}"></i-cell>
+    </view>
+  </i-swipeout>
+</view>

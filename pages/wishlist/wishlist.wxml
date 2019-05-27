@@ -1,0 +1,46 @@
+<!--pages/wishlist/wishlist.wxml-->
+<view wx:if="{{hasList}}">
+  <view wx:for="{{list}}" class="list" wx:key="{{index}}">
+    <i-row>
+      <i-col span="3" i-class="col-class">
+        <icon wx:if="{{item.selected}}" type="success" data-index="{{index}}"  class="list-pro-select" bindtap="selectList"/>
+        <icon wx:else type="circle" class="list-pro-select" data-index="{{index}}" bindtap="selectList"/>
+      </i-col>
+      <i-col span="21" i-class="col-class">
+        <view class='line'>
+          <view class='line' bindtap='gotoDetail' data-index="{{index}}">
+            <image src='../../static/RNB.png' class='img'></image> 
+            <text class='productName'>{{item.productName}}</text>
+          </view>
+          <view wx:if="{{item.productNum}}">
+            <text class='productCondition'>当前剩余{{item.productNum}}件</text>
+          </view>   
+          <view wx:else>
+            <i-button class="lackButton" bind:click="lackWarningClick" type="info" size="small" shape="circle" inline="true">缺货提醒</i-button>
+          </view>
+        </view>      
+      </i-col>
+    </i-row>
+  </view>
+</view>
+<view wx:else>
+  <image src="../../static/noneWishList.png" class='noneImg&&center'></image>
+</view>
+
+<view class="layout_horizontal&&footer">
+  <icon wx:if="{{selectAllStatus}}" type="success" class="list-pro-select" bindtap="selectAll"/>
+  <icon wx:else type="circle" class="list-pro-select" bindtap="selectAll"/>
+  <i-button class="right" bind:click="handleDelete" type="primary">删除</i-button>
+</view>
+
+<i-action-sheet visible="{{visible}}" actions="{{actions}}" show-cancel bind:cancel="handleCancel" bind:click="deleteList" mask-closable="{{ false }}">
+  <view slot="header" style="padding: 16px">
+    <view style="color: #444;font-size: 16px">是否确认删除</view>
+   </view>
+</i-action-sheet>
+<i-message id="message"/>
+
+<modal title="设置到货通知" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+  <text>本券暂时缺货，到货后将通过手机短信通知您</text>
+  <i-input value="{{telephone}}" type="number" title="联系电话" placeholder="请输入手机号" />  
+</modal>

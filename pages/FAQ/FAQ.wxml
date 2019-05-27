@@ -1,0 +1,6 @@
+<i-cell-group>
+  <i-cell title="商品问题" is-link></i-cell>
+  <i-cell title="付款问题" is-link></i-cell>
+  <i-cell title="活动相关" is-link></i-cell>
+  <i-cell title="优惠券" is-link></i-cell>
+</i-cell-group>

@@ -1,0 +1,14 @@
+/* pages/blacklist/blacklist.wxss */
+.blacklist {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  top: 110rpx;
+  flex-direction: column;
+}
+
+.img{
+  width: 35rpx;
+  height: 35rpx;
+}

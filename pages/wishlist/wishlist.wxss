@@ -1,0 +1,36 @@
+/* pages/wishlist/wishlist.wxss */
+.list{
+  position: relative;
+  padding: 35px 0rpx 0rpx 30rpx;
+  bottom:35px;
+  border-width: thick;
+  border-color: #000000;
+}
+.line{
+  display: flex;
+  height:100%;
+  flex-direction: row;
+  align-items: center;
+}
+.img{
+  width: 150rpx;
+  height: 150rpx;
+}
+.noneImg{
+  width: 700rpx;
+  height: 600rpx;
+}
+.productName{
+  padding: 10rpx;
+  font-size: 40rpx;
+}
+.productCondition{
+  position: fixed;
+  right: 20rpx;
+  padding: 10rpx;
+  font-size: 35rpx;
+}
+.lackButton{
+  position: fixed;
+  right: 0;
+}

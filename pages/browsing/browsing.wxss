@@ -1,0 +1,5 @@
+/* pages/browsing/browsing.wxss */
+.img{
+  width: 35rpx;
+  height: 35rpx;
+}

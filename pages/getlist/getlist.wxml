@@ -1,0 +1,9 @@
+<view wx:for="{{list}}" wx:key="{{index}}">
+  <i-card title="{{item.productName}}" full="true" thumb="{{item.img}}" bindtap='gotoDetail' data-index="{{index}}">
+  <view slot="content">当前剩余{{item.productNum}}件</view>
+  <view slot="footer">
+    <image src='../../static/RNB.png' class='img'></image> 
+    热度：{{item.heat}}
+  </view>
+  </i-card>
+</view>

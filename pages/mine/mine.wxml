@@ -1,0 +1,48 @@
+<view class="user-info" style="background-image: url({{skin}})">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="user-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="user-nickname">{{userInfo.nickName}}</text>
+  </block>
+</view>
+
+<i-grid>
+  <i-grid-item>
+    <button class="button" bindtap='gotoFAQ'>
+      <i-icon type="feedback_fill" size="25"/>
+      <view>常见问题</view>
+    </button>
+  </i-grid-item>        
+  <i-grid-item>
+    <button class="button" open-type="contact" bindcontact="handleContact">
+      <i-icon type="interactive_fill" size="25"/>
+      <view>联系客服</view>
+    </button>
+  </i-grid-item>
+  <i-grid-item>
+    <button class="button" bindtap='gotoLabel'>
+      <i-icon type="label_fill" size="25"/>
+      <view>我的标签</view>
+    </button>
+  </i-grid-item>
+</i-grid>
+<i-grid>
+  <i-grid-item>
+    <button class="button" bindtap='gotoGetList'>
+      <i-icon type="time_fill" size="25"/>
+      <view>历史领取</view>
+    </button>
+  </i-grid-item> 
+  <i-grid-item>
+    <button class="button" bindtap='gotoBlackList'>
+      <i-icon type="delete_fill" size="25"/>
+      <view>黑名单</view>
+    </button>
+  </i-grid-item> 
+  <i-grid-item>
+    <button class="button" bindtap='gotoBrowsing'>
+      <i-icon type="activity_fill" size="25"/>
+      <view>浏览记录</view>
+    </button>
+  </i-grid-item> 
+</i-grid>

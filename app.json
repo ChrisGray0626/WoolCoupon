@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/wishlist/wishlist",
+    "pages/detail/detail",
+    "pages/FAQ/FAQ",
+    "pages/blacklist/blacklist",
+    "pages/label/label",
+    "pages/getlist/getlist",
+    "pages/browsing/browsing"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "羊毛券优惠券",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-panel": "../../dist/panel/index",
+    "i-input": "../../dist/input/index",
+    "i-card": "../../dist/card/index",
+    "i-grid": "../../dist/grid/index",
+    "i-grid-item": "../../dist/grid-item/index",
+    "i-grid-icon": "../../dist/grid-icon/index",
+    "i-grid-label": "../../dist/grid-label/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-icon": "../../dist/icon/index",
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index",
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-checkbox-group": "../../dist/checkbox-group/index",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-message": "../../dist/message/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-swipeout": "../../dist/swipeout/index"
+  },
+  "tabBar": {
+    "color": "#80848f",
+    "selectedColor": "#2d8cf0",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/home_fill.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/wishlist/wishlist",
+        "iconPath": "static/wishlist.png",
+        "selectedIconPath": "static/wishlist_fill.png",
+        "text": "心愿单"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/mine.png",
+        "selectedIconPath": "static/mine_fill.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

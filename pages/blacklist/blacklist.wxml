@@ -1,0 +1,28 @@
+<view class='bar'>
+  <i-tabs current="{{currentTab}}" bindchange="tabHandleChange">
+    <i-tab key="1" title="标签"></i-tab>
+    <i-tab key="2" title="优惠券"></i-tab>
+  </i-tabs>
+</view>
+<view  class='blacklist'>
+<view wx:if="{{tab1}}">
+  <view wx:for="{{labelList}}" wx:key="{{index}}">
+    <i-swipeout i-class="i-swipeout-demo-item" actions="{{actions}}" operateWidth="{{100}}" bind:change="delete" data-index="{{index}}">
+      <view slot="content">
+        <i-cell i-class="i-cell-padding" title="{{item.tag}}"></i-cell>
+      </view>
+    </i-swipeout>
+  </view>
+</view>
+<view wx:if="{{tab2}}">
+  <view wx:for="{{produceList}}" wx:key="{{index}}">
+    <i-card title="{{item.productName}}" full="true" thumb="{{item.img}}" bindtap='gotoDetail' data-index="{{index}}">
+    <view slot="content">当前剩余{{item.productNum}}件</view>
+    <view slot="footer">
+      <image src='../../static/RNB.png' class='img'></image> 
+      热度：{{item.heat}}
+    </view>
+    </i-card>
+  </view>
+</view>
+</view>

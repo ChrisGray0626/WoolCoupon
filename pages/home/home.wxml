@@ -1,0 +1,30 @@
+<import src="/wxSearch/wxSearch.wxml"/>
+<view class='bar'>
+  <view class="wxSearch-section">
+    <view class="wxSearch-pancel">
+      <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+      <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+    </view>
+  </view>
+  <i-tabs current="{{currentTab}}" bindchange="tabHandleChange">
+    <i-tab key="1" title="精选"></i-tab>
+    <i-tab key="2" title="视频"></i-tab>
+  </i-tabs>
+  <template is="wxSearch" data="{{wxSearchData}}"/>
+</view>
+<view class='container'>
+  <view wx:if="{{tab1}}">
+    <view wx:for="{{list}}" wx:key="item" class='list'>
+      <view class='product' bindtap='gotoDetail1' data-index="{{index}}">
+        <image class="img" src="{{item.productImg1}}"/>
+        <view class='center'>{{item.productName1}}</view>
+      </view>
+      <view class='product' bindtap='gotoDetail2' data-index="{{index}}">
+        <image class="img" src="{{item.productImg2}}"/>
+        <view class='center'>{{item.productName2}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{tab2}}">
+  </view>
+</view>
